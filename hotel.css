@@ -89,72 +89,165 @@ font-family: 'Signika Negative', sans-serif;
     
 }
 
-.menu li {
-    margin-left: 10px;
-    text-decoration: none;
-    
-}
-
-.menu li a { 
-    text-decoration: none;
-    color: #fff;
-}
-
-.menu li ul {
-    text-decoration: none;
-    margin-right: 10px;
-}
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
-    background-color: #ffffff;
-}
-
-
-main div{
-    padding: 20px;
-    
-    
-}
-
-main div h4 {
-    bottom: 26px;
-    border-radius: 5px;
-    background-color: #9c5512;
-    border-radius: 10px;
+.product-section {
+    padding: 40px 20px;
     text-align: center;
-    color: rgb(247, 247, 247);
 }
 
-
-main div p {
-    margin-top: 10px;
-    font-family: 'Pridi', serif;
-    color: rgb(0, 0, 0);
+.product-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Signika Negative', sans-serif;
 }
 
-main div h3 {
-    font-family: 'Pridi', serif;
-    margin-bottom: 10px;
-    color: rgb(0, 0, 0);
-
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
-main img {
-    width: 100%;
-    border-radius: 10px;
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+}
+
+.product-card img {
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.product-card p {
+    font-size: 16px;
+    color: #666;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.product-card button {
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #3a13a5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.product-card button:hover {
+    background-color: #320f91;
 }
 
 
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    font-family: 'Anton', sans-serif;
-font-family: 'Kanit', sans-serif;
-font-family: 'Pridi', serif;
-font-family: 'Prompt', sans-serif;
-font-family: 'Roboto Condensed', sans-serif;
-font-family: 'Signika Negative', sans-serif;
+    background-color: #333; /* สีพื้นหลัง */
+    color: #fff; /* สีตัวอักษร */
+    /* ระยะห่าง */
+    text-align: center; /* จัดตำแหน่งข้อความให้อยู่ตรงกลาง */
+    font-family: 'Kanit', sans-serif; /* ฟอนต์ที่เลือก */
+    font-size: 14px;
+    max-width: 2000px;
+    width: 100%;
+    margin-top: 11rem;
 }
+footer .footer-container {
+    max-width: 1200px;
+    margin: 0 auto; /* จัดกึ่งกลาง */
+}
+footer p {
+    margin: 5px 0;
+}
+footer a {
+    color: #ffa500; /* สีลิงก์ */
+    text-decoration: none; /* ลบขีดเส้นใต้ */
+    font-family: 'Signika Negative', sans-serif;
+    
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+#cart-container {
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    font-family: 'Signika Negative', sans-serif;
+    
+}
+
+#cart-container p{
+    font-family: 'Signika Negative', sans-serif;
+}
+
+#cart-list {
+    list-style: none;
+    padding: 0;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+#cart-list p{
+    
+    font-family: 'Signika Negative', sans-serif;
+}
+
+#cart-list li {
+    margin-bottom: 10px;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.btn_Cart button   {
+    padding: 10px;
+    background-color:#3344dd;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-left: 46cm;
+    margin-top: 10px;
+    font-family: 'Signika Negative', sans-serif;
+    
+    
+}
+
+
+
+
+#cart-container button {
+    padding: 5px 10px;
+    background-color: #3344dd; /* สีเขียว */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    font-family: 'Signika Negative', sans-serif;
+}
+
+#cart-container button:hover {
+    background-color: #080a1d; /* สีเขียวเข้มเมื่อ hover */
+}
+
+#cart-container button:active {
+    background-color: #3344dd; /* สีเขียวเมื่อคลิก */
+}
+
+

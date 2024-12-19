@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel</title>
     <link rel="stylesheet" href="hotel.css">
+   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@300;400;700&display=swap" rel="stylesheet">
@@ -31,96 +33,66 @@
                <li><a href="Tourist attraction.html">Tourist attraction</a>
                      <ul>
                         <li><a href="Tourist attraction.html">กิจกรรม ดำน้ำชมกระการัง</a></li>
-                    <li><a href="shop.html">ชิมช้อปนอน</a></li> </ul> </li>
+                    <li><a href="hotel.html">Shop</a></li> </ul> </li>
            
     
-            <li><a href="hotel.html">Hotel</a></li>
+            <li><a href="hotel.html">Shop</a></li>
             <li><a href="Contact.html">Contact</a></li>
+            
         </ul>
-    </nav>
-    <main>
-        <div>
-            <h3> โรงแรมเจ้าหลาวทอแสงบีช</h3>
-            <img src="chaolao-tosang-beach.jpg" alt="">
-            <p>
-                ฿3,639
-                </p>
-                <h4> BUY NOW</h4>
+    </nav> <div class="btn_Cart">
+    <button onclick="toggleCart()">View Cart</button>
+</div>
+
+  <!-- ตะกร้าสินค้า -->
+   
+  <div id="cart-container" style="display:none;">
+    <h2>Cart</h2>
+    <ul id="cart-list"></ul>
+    <p>ราคา: <span id="total-price">0  บาท</span></p>
+  
+    <button  onclick="checkout()">Checkout</button>
+
+</div>
+       
+
+    <!---รายหารสินค้่-->
+    <section id="products" class="product-section">
+        <h2>OTOP SHOP</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://www.otoptoday.com/images/upload_img/products/product_cover_1564626101.jpg" alt="Product 1">
+                <h3>ปลาสรรค์</h3>
+                <p>25.00 บาท</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://www.otoptoday.com/images/upload_img/products/product_cover_1563890069.jpg" alt="Product 2">
+                <h3>ไตแลาแห้ง</h3>
+                <p>30.00 บาท</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://www.otoptoday.com/images/upload_img/products/product_cover_1563622539.jpg" alt="Product 3">
+                <h3>ประเป๋ามะพร้าว</h3>
+                <p>15.00 บาท</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+            </div>
         </div>
+    </section>    
 
-        <div>
-            <h3> ยู </h3>
-            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/29/bf/95/swimming-pool.jpg?w=1200&h=-1&s=1" alt="">
-            <p>
-                ฿3,639
-                </p>
-                <h4> BUY NOW</h4>
-        </div>
-
-        <div>
-            <h3>วิลล่าเทวา รีสอร์ทแอนด์โฮเทล</1h3>
-            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/fa/96/6b/bathroom.jpg?w=1200&h=-1&s=" alt="">
-            <p>
-                ฿3,639
-                </p>
-                <h4> BUY NOW</h4>
-        </div>
-
-
-        <div>
-            <h3> บ้านวัชรา</h3>
-            <img src="crowne-plaza-bangkok.jpg" alt="">
-            <p>
-                ฿3,639
-                </p>
-                <h4> BUY NOW</h4>
-        </div>
-
-        <div>
-            <h3> บ้านวัชรา</h3>
-            <img src="exterior.jpg" alt="">
-            <p>
-                ฿3,639
-                </p>
-                <h4> BUY NOW</h4>
-        </div>
-
-
-        <div>
-            <h3> Mode Sathorn Hotel</h3>
-            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/4f/77/85/innside-rooftop-swimming.jpg?w=1200&h=-1&s=1" alt="">
-            <p>
-                ฿3,639
-                </p>
-                <h4> BUY NOW</h4>
-        </div>
-
-
-        <div>
-            <h3> โรงแรมเดอะ แกรนด์</h3>
-            <img src="baan-vajra.jpg" alt="">
-            <p>
-                ฿3,639
-                </p>
-                <h4> BUY NOW</h4>
-        </div>
-
-        <div>
-            <h3> โรงแรมอีสติน แกรนด์ สาทร</h3>
-            <img src="function-room.jpg" alt="">
-            <p>
-                ฿3,639
-                </p>
-                <h4> BUY NOW</h4>
-        </div>
-
-    </main>
 
     <footer>
-        <p> wassamapol kruearee  IG: _real.bb 42880  Gmail: 42880@nd.ac.th</p>
+        <div class="about"><h3>about me</h3></div>
+        <p>© 2024 Wassamapol Kruearee. All rights reserved.</p>
+        
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100013383577425" target="_blank">Facebook</a>
+        </div>
     </footer>
     
-</body>
-</html>
+
+    <script src="hotel.js" defer></script>
+
 </body>
 </html>
